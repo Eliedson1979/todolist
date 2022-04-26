@@ -3,8 +3,8 @@ let botaoAdicionar = document.querySelector("#criar-tarefa");
 let listTarefa = document.querySelector("#lista-tarefas");
 let estilo = document.querySelector("body");
 
+//ADICIONANDO FUNÇÃO NO BOTAO
 botaoAdicionar.addEventListener("click", btnAdicionar);
-
 
 function btnAdicionar() {
     let tarefa = caixaTexto.value;
@@ -12,13 +12,24 @@ function btnAdicionar() {
     let item = document.createElement("li");
     item.innerHTML = tarefa;
     lista.appendChild(item);
-    caixaTexto.value = "";    
+    caixaTexto.value = "";   
+     
 }
+//ADICIONAR COR NO FUNDO DA PAGINA
 listTarefa.addEventListener("click", mudaCor);
+
 function mudaCor() {
-    estilo.style.backgroundColor = "rgb(128,128,128)";
+    let cor = document.querySelector("body");
+    cor.style.backgroundColor = "rgb(128, 128, 128)";
+
+}
     
+
+window.onload = () => {
+  
 }
 
-window.onload;
-//mudaCor();
+
+
+
+
