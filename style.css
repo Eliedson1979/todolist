@@ -1,23 +1,24 @@
-main{
-	width: 1000px;
-	border: 2px solid black;
-	border-radius: 2pc;	
-	margin: 20px;
-	padding: 20px;
-	background-color: white;
-	
-}
-body{
-	background-color: #40ad40;
-}
-button{
-	background-color: #0087cf;
-	border-radius: 5pc;
-	color: white;
-	padding: 10px 10px;
-	margin: 3px;
-	border: none;
-	cursor: pointer;
-	width: 100px;
+main {
+  width: 1000px;
+  border: 2px solid black;
+  border-radius: 2pc;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+
 }
 
+body {
+  background-color: #40ad40;
+}
+
+button {
+  background-color: #0087cf;
+  border-radius: 5pc;
+  color: white;
+  padding: 10px 10px;
+  margin: 3px;
+  border: none;
+  cursor: pointer;
+  width: 100px;
+}
