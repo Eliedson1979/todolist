@@ -15,17 +15,34 @@ function btnAdicionar() {
   caixaTexto.value = "";
 //	item.addEventListener("click", mudaCor);
   lista.appendChild(item);
-	console.log(item);
+	
 	
 }
-//ADICIONAR COR NO FUNDO 
+//Clicar em um item da lista deve alterar a cor de fundo do item para cinza rgb(128,128,128)
 listTarefa.addEventListener("click", mudaCor);	
 function mudaCor(event) {
 	event.target.style.backgroundColor = "rgb(128, 128, 128)";
-		
+//	console.log(event.target);			
 	}
 
+//Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
+listTarefa.addEventListener("click", seleciona);	
+function seleciona(event) {
+	let itemSelecionado = event.target.style.backgroundColor = "rgb(128, 128, 128)";
+	for (let i = 0; i < listTarefa.children.length; i+=1) {
+		listTarefa.children[i].style.backgroundColor = "white";
+	}
+	if (itemSelecionado == "rgb(128, 128, 128)") {
+		event.target.style.backgroundColor = "rgb(128, 128, 128)";
 
-//LIMPAR ITEM SELECIONADO
+	}
+}
+
+
+
+
+
+
+
 
 

@@ -22,3 +22,6 @@ button {
   cursor: pointer;
   width: 100px;
 }
+.selecionada {
+  background-color: rgb(128, 128, 128);
+}
