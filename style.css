@@ -5,14 +5,15 @@ main {
   margin: 20px;
   padding: 20px;
   background-color: white;
-
+  
 }
 
 body {
   background-color: #40ad40;
+  
 }
 
-button {
+button{
   background-color: #0087cf;
   border-radius: 5pc;
   color: white;
@@ -32,6 +33,9 @@ button {
   cursor: pointer;
   width: 100px;
 }
+.finalizar{
+  width: 150px;
+}
 .completed{
 	text-decoration:line-through solid black;
 
@@ -41,3 +45,4 @@ button {
   font-size: 20px;
   color: black;
 }
+
