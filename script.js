@@ -1,6 +1,7 @@
 let caixaTexto = document.querySelector("#texto-tarefa");
 let botaoAdicionar = document.querySelector("#criar-tarefa");
 let listTarefa = document.querySelector("#lista-tarefas");
+let botaoLimpar = document.querySelector("#apaga-tudo");
 
 
 
@@ -39,15 +40,21 @@ function seleciona(event) {
   }
 }
 //Clicar duas vezes em um item, faz com que ele seja riscado, indicando que foi completo. Deve ser possível desfazer essa ação clicando novamente duas vezes no item
-listTarefa.addEventListener("dblclick", risca);
+listTarefa.addEventListener("dblclick", risca); 
 
-function risca(event) {
+function risca(event) { //essa função tanto risca como também remove e add
 	if(event.target.className == "completed"){
 		event.target.classList.remove('completed');
 	}else {
 		event.target.classList.add('completed');
-	}
-  console.log(event.target.className);
+	} 
+}
+// Adicionar um botão que quando clicado deve apagar todos os itens da lista
+botaoLimpar.addEventListener("click", btnLimpar);
+
+function btnLimpar(event){
+	listTarefa.innerHTML = "";
+		
 }
 
-//clicando novamente duas vezes no item, deve ser possível desfazer o risco
+
