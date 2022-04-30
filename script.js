@@ -3,6 +3,7 @@ let botaoAdicionar = document.querySelector("#criar-tarefa");
 let listTarefa = document.querySelector("#lista-tarefas");
 let botaoLimpar = document.querySelector("#apaga-tudo");
 let botaoFinalizado = document.querySelector("#remover-finalizados");
+let botaoSalvarList = document.querySelector("#salvar-tarefas");
 
 
 //Adicionando item a lista
@@ -16,6 +17,7 @@ function btnAdicionar() {
   caixaTexto.value = "";
   //item.addEventListener("click", mudaCor);
   lista.appendChild(item);
+  
   
 
 }
@@ -61,17 +63,32 @@ function btnLimpar(){
 //clicado remove somente os elementos finalizados ou marcado da sua lista
 botaoFinalizado.addEventListener("click", btnFinalizar);
 
-function btnFinalizar(event){
-  let lista = document.querySelector("#lista-tarefas");
-  let item = document.querySelectorAll(".completed");
-  for(let i = 0; i < item.length; i++){
-    lista.removeChild(item[i]);
-    console.log(item[i]);
+function btnFinalizar(){
+  let listMarcado = document.querySelector("#lista-tarefas");
+  let itemMarcado = document.querySelectorAll(".completed");
+  for(let i = 0; i < itemMarcado.length; i++){
+    listMarcado.removeChild(itemMarcado[i]);
+    
   }
-  
-
 }
-//console.log(event.target.classList)
+// que salve o conteúdo da lista. Se você fechar e reabrir a página, a lista deve continuar no estado em que estava
+botaoSalvarList.addEventListener("click", btnSalvarList);
+
+function btnSalvarList(){
+  let listSalvar = document.querySelector("#lista-tarefas");
+  let itemSalvar = document.querySelectorAll("li");
+  let salvarLista = listSalvar.innerHTML;
+  localStorage.setItem("lista", salvarLista);
+  console.log(itemSalvar);
+}
+//Se você abrir a página novamente, a lista deve continuar no estado em que estava
+if(localStorage.getItem("lista") != null){
+  listTarefa.innerHTML = localStorage.getItem("lista");
+}
+
+
+
+
 
 
 
