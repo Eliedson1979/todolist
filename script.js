@@ -4,6 +4,9 @@ let listTarefa = document.querySelector("#lista-tarefas");
 let botaoLimpar = document.querySelector("#apaga-tudo");
 let botaoFinalizado = document.querySelector("#remover-finalizados");
 let botaoSalvarList = document.querySelector("#salvar-tarefas");
+let botaoCima = document.querySelector("#mover-cima");
+let botaoBaixo = document.querySelector("#mover-baixo");
+let botaoDeletar = document.querySelector("#remover-selecionado");
 
 
 //Adicionando item a lista
@@ -85,6 +88,73 @@ function btnSalvarList(){
 if(localStorage.getItem("lista") != null){
   listTarefa.innerHTML = localStorage.getItem("lista");
 }
+//Mover para cima" deve mover o item selecionado para o topo da lista
+botaoCima.addEventListener("click", btnCima);
+
+function btnCima(){
+  let itemCima = document.querySelectorAll("li");
+  for(let i = 1; i < itemCima.length; i += 1){
+    
+    if(itemCima[i].style.backgroundColor == "rgb(128, 128, 128)"){
+      listTarefa.insertBefore(itemCima[i], itemCima[i - 1]);
+      console.log(itemCima[i]);
+    }
+  }
+}
+//Mover para baixo" deve mover o item selecionado para o final da lista
+botaoBaixo.addEventListener("click", btnBaixo);
+
+function btnBaixo(){
+  let itemBaixo = document.querySelectorAll("li");
+  for(let i = 1; i < itemBaixo.length; i -= 1){
+    
+    if(itemBaixo[i].style.backgroundColor == "rgb(128, 128, 128)"){
+      listTarefa.insertBefore(itemBaixo[i], itemBaixo[i - 1]);
+   //   console.log(itemBaixo[i]);
+    }
+  }
+}
+//Deve ser possível remover um item da lista
+botaoDeletar.addEventListener("click", btnDeletar);
+
+function btnDeletar(){
+  let itemDeletar = document.querySelectorAll("li");
+  for(let i = 0; i < itemDeletar.length; i += 1){
+    
+    if(itemDeletar[i].style.backgroundColor == "rgb(128, 128, 128)"){
+      listTarefa.removeChild(itemDeletar[i]);
+ //     console.log(itemDeletar[i]);
+    }
+  }
+}
+
+
+
+
+window.onload = () => {
+  
+}
+
+
+
+
+   
+    
+  
+
+
+
+
+// let itemBaixo = document.querySelectorAll("li");
+//   for(let i = itemBaixo.length - 1 ; i >= 0; i -= 1){
+    
+//     if(itemBaixo[i].style.backgroundColor == "rgb(128, 128, 128)"){
+//       listTarefa.insertBefore(itemBaixo[i], itemBaixo[i - 1]);
+//       console.log(itemBaixo[i]);
+//     }
+//   }
+// }
+  
 
 
 

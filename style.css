@@ -23,7 +23,7 @@ button{
   cursor: pointer;
   width: 100px;
 }
-.limpar{
+.limpar, .del{
   background-color: #90191b;
   border-radius: 5pc;
   color: white;
@@ -40,9 +40,16 @@ button{
   background-color: #40ad40;
 
 }
+.setaCima, .setaBaixo{
+  background-color: #fc7f00;
+  
+}
 .completed{
 	text-decoration:line-through solid black;
 
+}
+.selected {
+  background-color: gray;
 }
 #rodape{
   text-align: center;
