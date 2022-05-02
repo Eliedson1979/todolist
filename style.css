@@ -5,15 +5,15 @@ main {
   margin: 20px;
   padding: 20px;
   background-color: white;
-  
+
 }
 
 body {
   background-color: #40ad40;
-  
+
 }
 
-button{
+button {
   background-color: #0087cf;
   border-radius: 5pc;
   color: white;
@@ -23,7 +23,9 @@ button{
   cursor: pointer;
   width: 100px;
 }
-.limpar, .del{
+
+.limpar,
+.del {
   background-color: #90191b;
   border-radius: 5pc;
   color: white;
@@ -33,27 +35,33 @@ button{
   cursor: pointer;
   width: 100px;
 }
-.finalizar{
+
+.finalizar {
   width: 150px;
 }
-.salvarList{
+
+.salvarList {
   background-color: #40ad40;
 
 }
-.setaCima, .setaBaixo{
+
+.setaCima,
+.setaBaixo {
   background-color: #fc7f00;
-  
-}
-.completed{
-	text-decoration:line-through solid black;
 
 }
-.selected {
-  background-color: gray;
+
+.completed {
+  text-decoration: line-through solid black;
+
 }
-#rodape{
+
+.selected {
+  background-color: rgb(128, 128, 128);
+}
+
+#rodape {
   text-align: center;
   font-size: 20px;
   color: black;
 }
-
