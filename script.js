@@ -41,7 +41,7 @@ function seleciona(event) {
   for (let i = 0; i < listTarefa.children.length; i += 1) {
     listTarefa.children[i].style.backgroundColor = 'white';
   }
-  if (itemSelecionado == 'rgb(128, 128, 128)') {
+  if (itemSelecionado === 'rgb(128, 128, 128)') {
     event.target.style.backgroundColor = 'rgb(128, 128, 128)';
   }
 }
@@ -49,7 +49,7 @@ function seleciona(event) {
 listTarefa.addEventListener('dblclick', risca);
 
 function risca(event) { // essa função tanto risca como também remove e add
-  if (event.target.className == 'completed') {
+  if (event.target.className === 'completed') {
     event.target.classList.remove('completed');
   } else {
     event.target.classList.add('completed');
@@ -91,7 +91,7 @@ botaoCima.addEventListener('click', btnCima);
 function btnCima() {
   const itemCima = document.querySelectorAll('li');
   for (let i = 1; i < itemCima.length; i += 1) {
-    if (itemCima[i].style.backgroundColor == 'rgb(128, 128, 128)') {
+    if (itemCima[i].style.backgroundColor === 'rgb(128, 128, 128)') {
       listTarefa.insertBefore(itemCima[i], itemCima[i - 1]);
       //     console.log(itemCima[i]);
     }
@@ -106,7 +106,7 @@ function btnBaixo() {
 
   const itemBaixo = document.querySelectorAll('li');
   for (let i = 0; i < itemBaixo.length; i += 1) {
-    if (itemBaixo[i].style.backgroundColor == 'rgb(128, 128, 128)') {
+    if (itemBaixo[i].style.backgroundColor === 'rgb(128, 128, 128)') {
       listTarefa.insertBefore(itemBaixo[i], itemBaixo[i + 2]);
       console.log(itemBaixo[i]);
     }
@@ -118,7 +118,7 @@ botaoDeletar.addEventListener('click', btnDeletar);
 function btnDeletar() {
   const itemDeletar = document.querySelectorAll('li');
   for (let i = 0; i < itemDeletar.length; i += 1) {
-    if (itemDeletar[i].style.backgroundColor == 'rgb(128, 128, 128)') {
+    if (itemDeletar[i].style.backgroundColor === 'rgb(128, 128, 128)') {
       listTarefa.removeChild(itemDeletar[i]);
       //     console.log(itemDeletar[i]);
     }
